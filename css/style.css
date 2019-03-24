@@ -1,0 +1,106 @@
+@import url("navbar.css");
+@import url("about-me.css");
+@import url("skills.css");
+@import url("portfolio.css");
+@import url("contact.css");
+@import url("hamburger.css");
+
+* {
+	margin: 0px;
+  }
+
+body { 
+	height: 100%;
+	font-family: Tahoma,Verdana,Segoe,sans-serif; 
+	background-image: url("../images/image.jpg");
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.grid {
+	width: 100%;
+	height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+	grid-template-rows: 150px 600px 150px;
+}
+
+.menu-container {
+	display: none;
+}
+
+.logo-container {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.logo {
+	width: 80px;
+	height: 60px; 
+	padding: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.text-container {
+	background-color: #c7b1b4;
+	padding: 10px 30px 10px 30px;
+	/* opacity: 0.5; */
+	border-radius: 4px;
+	width: 110%;
+	height: 120%;
+	text-align: center;
+}
+
+.RM-title {
+	position: absolute;
+	max-width: 30%;
+	height: auto;
+	top: 25%;
+	left: 15%;
+}
+
+.link {
+	color: #ffffff;
+}
+
+.footer {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+	
+body {
+	background-image: url("../images/responsive.png");
+	background-size: cover;
+}
+
+.navbar {
+	display: none;
+}
+
+.menu-container {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	display: block;
+}
+
+.RM-title { 
+	position: absolute;
+	max-width: 60%;
+	height: auto;
+	padding: 5%;
+}
+}
+		
