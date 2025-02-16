@@ -1,19 +1,18 @@
 .about-me-container {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    width: 50%;
-    height: 70%;
-    justify-self: center;
-    text-align: center;   	
-} 
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 50%;
+  height: 70%;
+  justify-self: center;
+  text-align: center;
+}
 
 @media only screen and (max-width: 600px) {
-.about-me-container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    width: 50%;
-    height: 70%;
-    margin-right: 20%;
-    
-    }
-}	
+  .about-me-container {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      width: 100%; /* Take full width on smaller screens */
+      height: auto; /* Let height adjust to content */
+      margin-right: 0; /* Remove margin */
+  }
+}
