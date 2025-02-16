@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <title>Portfolio</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Portfolio</title>
+</head>
 
-  <body>
-      <div id="header"></div>
+<body>
 
-      <div class="portfolio-container">
-          <div class="text-container">
-              <h1>- Portfolio -</h1>
+    <div id="header"></div>
 
-              <div class="links">
-                  <ul>
-                      <li>
-                          <a href="https://github.com/ruthmci/Portfolio" target="_blank" rel="noopener noreferrer">
-                              <i class="fab fa-github"></i> Portfolio project @ Coder Academy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://github.com/ewhiley/dog_app" target="_blank" rel="noopener noreferrer">
-                              <i class="fab fa-github"></i> Terminal App project @ Coder Academy
-                          </a>
-                      </li>
-                      <li>
-                          <a href="http://caulfieldps.vic.edu.au/" target="_blank" rel="noopener noreferrer">
-                              <i class="fas fa-external-link-alt"></i> Caulfield Primary School Website (WordPress)
-                          </a>
-                      </li>
-                  </ul>
-              </div>
+    <div class="portfolio-container">
+        <div class="text-container">
+          <h1>- Portfolio -</h1>
+
+          <div class="links">
+              <ul>
+                  <li>
+                      <a href="https://github.com/ruthmci/Portfolio" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-github" id="portfolio-icon"></i> Portfolio project @ Coder Academy
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/ewhiley/dog_app" target="_blank" rel="noopener noreferrer">
+                          <i class="fab fa-github"></i> Terminal App project @ Coder Academy
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://caulfieldps.vic.edu.au/" target="_blank" rel="noopener noreferrer">
+                          <i class="fas fa-external-link-alt"></i> Caulfield Primary School Website (WordPress)
+                      </a>
+                  </li>
+              </ul>
           </div>
       </div>
+  </div>
 
-      <div id="footer"></div>
+    <div id="footer"></div>
 
-      <script src="js/script.js"></script>
-
-      <script>
-          window.onload = function () {
-
-              const portfolioLink = document.querySelector(".navbar a[href='portfolio.html']");
-              if (portfolioLink) {
-                  portfolioLink.classList.add("active");
+    <script>
+      window.onload = function () {
+          
+          if (window.location.pathname.includes('portfolio.html')) {
+              const portfolioIcon = document.getElementById('portfolio-icon');
+              if (portfolioIcon) {
+                  portfolioIcon.style.display = 'none';
               }
           }
-      </script>
-  </body>
+      };
+  </script>
+  
+  <script src="js/script.js"></script>
+</body>
 
 </html>
